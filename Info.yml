@@ -1,0 +1,70 @@
+# Stock and Index prices on Stock markets prediction app 
+# made with Python engine 3.5.6
+
+trigger:
+- master
+
+variables:
+
+  # Web app name
+  webAppName: 'PPredictor'
+
+  # Environnment name
+  environnmentName: 'PPredictor'
+
+  # Python version: 3.5.6
+  pythonVersion: '3.5.6'
+
+stages:
+- stage: Build
+  displayName: BuildStage
+  jobs:
+  - job: BuildJob 
+    pool: 
+    steps:
+    - task: UsePythonVersion3.5.6
+    inputs:
+       versionSpec: '$(pythonVersion)'
+    displayName: 'Use Python $(pythonVersion)'
+
+  - script: |
+      python source
+      source of usage 
+      python -m pip install --upgrade pip to operated commands 
+      pip install setup 
+      pip install -r requirements.txt
+    workingDirectory: ${projectBox}
+    displayName: "Install requirements to run the app."
+
+  - task: ArchiveFiles
+    displayName: 'Archive files'
+    inputs:
+      rootFolderOrFile: '$(projectBox)'
+      includeBoxFolder: false 
+      archiveType: zip
+      archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      replaceExistingArchive: true 
+
+    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      displayName: 'Upload package of installing'
+      artifact: drop 
+
+    - stage: Deploy
+      displayName: 'Deploy web app'
+      dependsOn: Build
+      condition: succeeded()
+      jobs:
+      - deployment: DeploymentJob 
+        pool: 
+        environment: $(environmentName)
+        strategy: 
+          runOnce:
+             deploy:
+               steps:
+
+              - task: UsePythonVersion
+                inputs:
+                  versionSpec: '$(pythonVersion)'
+                displayName: 'Use Python version 3.5.6'
+
+                
