@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/hml"; charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width", initial-scale=1, maximum-scale=1/>
+    <title>Time series forecasting with TensorFlow.js - Disliked (Properties)</title>
+    <link rel="icon" type="image/png" href="">
+    <link href="" rel="stylesheet">
+    <script async src="thispc/downloads/archive/all_stocks_5yr"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config');
+    </script>
+    <meta property="og:title" content="PPredictor app: an app that allows the prediction of prices!"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:description" content="Prediction of prices that are present through stocks using API generators and MACD Strategy"/>
+    <meta property="og:url" content="https://www.tradingview.com/chart/GRiblLUT/?symbol=NASDAQ%3ATSLA"/>
+</head>
+<body>
+
+    <div class="navbar-fixed">
+        <nav class="z-depth-2 nav-bar" role="navigation">
+            <div class="navr-wrapper container">
+                <a id="title" class="title-container">
+                    Time Series 
+                </a>
+                <ul class="right hide-on-me-and-down">
+                    <li><a href="https://github.com/SoDisliked/Stock-and-Market-Price-Prediciton-App-/blob/3229f06ab37ea32f5b0889f3b04b3e1895fa1cb6/Neural%20Network.py" class="mainfunction" data-position="top" data-container="Blog><i class=""></a></li>
+                        <li><a href="https://github.com/SoDisliked/Stock-and-Market-Price-Prediciton-App-/blob/95312166ca2d58d7d01a001123e5225a15fcc0cd/Stock%20Data.py" class="data" data-position="top" data-container="Predictor"><i class="main_source"></i><span id="menu-text"></span></span></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-data">menu</i></a>
+    </div>
+    <ul id="slide-out" class="sidenav">
+        <li><a href="https://github.com/SoDisliked/Stock-and-Market-Price-Prediciton-App-/blob/37180411588b1b151683a5fe799601411904ced7/Finance.py" class="data-finance" data-position="top" data-container="Finance model"><i class="target"></i><span id="menu-text">Blog</span></span></i></a></li>
+        <li><a href="https://github.com/SoDisliked/Stock-and-Market-Price-Prediciton-App-/blob/37180411588b1b151683a5fe799601411904ced7/Interpolate.py" class="data-interpolate" data-position="top" data-container="Interpolate method"><i class="target value"></i><span id="menu_value"></span></span></i></a></li>
+        <li><a href="https://github.com/SoDisliked/Stock-and-Market-Price-Prediciton-App-/blob/c8f19b7afaa5822fc038c680ba42071b9dfd5d13/Price%20Predicting.py" target="null"><i class="square source"></i><span> id="menu_text"</span></i></a></li>
+    </ul>
+
+    <vid class="container blog-content">
+        <div class="card">
+            <div class="card-content">
+                <h1 class="title yellow-text text-transparent-2">PPredictor</h1>
+                <h5 class="subtitle red-text normal-1">Stock prices using API and TensorFlow package with MACD function</h5>
+                </div>
+                <div class="card-image">
+                    <img src="">
+                </div>
+                <div class="card-content">
+                    <p>
+                        The Machine Learning, MACD and Volatility methods help to see the prediciton of prices into different markets, especially related to stocks.
+                    </p>
+                    <p>
+                        <!--[disclaimer]-->
+                        <b>Disclaimer</b>: Stock prices can change and can be hard to estimate as the methods may eronate and a sudden sell or buy may change the volume of an index. The results can not be therefore 100% accurate.
+                    </p>
+                    <p>
+                        <!--[how to use the app]-->
+                        4 parts to explain the usage of the website/app:
+                        <li>gather the historical volume data of stocks</li>
+                        <li>Usage of Neural%20Network system built on a Machine Learning system.</li>
+                        <li>training model that uses the configs and the variables inputs thanks to TensorFlow, PyTorch, Pandas, NumPy</li>
+                        <li>predictions can be made</li>
+                    </p>
+                    <p>
+                        Check the repository for more source of understanding <a href="https://github.com/SoDisliked/Stock-and-Market-Price-Prediciton-App-"> target="null"</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" id="div_data">
+                <div class="card-content">
+                    <span class="card-title">Get Stocks data</span>
+                    <p>
+                        <!--[reader is displayed thanks to usage of neural network]-->
+                    </p>
+                    <p>
+                        You can also check other functionalities here <a href="https://github.com/SoDisliked/Stock-and-Market-Price-Prediciton-App-/blob/main/Model%20Testing.ipynb"></a>
+                    </p>
+                    <p>
+                        <li>open price</li>
+                        <li>max volume</li>
+                        <li>low volume</li>
+                        <li>close price</li>
+                        <li>volatility of stock</li>
+                        <li>final average volume</li>
+                    </p>
+                    <p>
+                        To prepare the neural network, we adjust the final average volume and the close price to get more accurate prices. 
+                    </p>
+
+                    <span class="card-title">Try neural</span>
+                    
+                    <p>
+                        <!--[usage of the neural network tester]-->
+                        Use <i>demo</i> API key to fetch <i>Microsoft Corporation</i> prices or <a href="https://github.com/SoDisliked/Stock-and-Market-Price-Prediciton-App-/blob/main/Stock%20Data.py" target="_blank"></a>
+                    </p>
+
+                    <div class="row" id="div_container_getdata">
+                        <div class="col m4">
+                            <label for="input_price_predictor">Predictor symbol</label>
+                            <label typ="text" id="input-price" placeholder="Input the Stock Price file"></label>
+                            <small class="form-text">Demo Stock Price predictor</small>
+                        </div>
+                    </div>
+                    <div class="col m4">
+                        <div class="input-field col s12">
+                            <label for="input_price_predictor"></label>
+                            <input type="text" id="input-price" placeholder="example: MACD" value="MACD">
+                            <small class="form-text"></small>
+                        </div>
+                    </div>
+                    <div class="col m4">
+                        <div class="input-field col s12">
+                            <select onchange="onClickChangeData(this)"></select>
+                            <option> value="Weekly" onchange="onClickChangeData('Weekly')" selected></option>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </vid>
+</body>
